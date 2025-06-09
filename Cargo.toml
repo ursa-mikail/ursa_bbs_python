@@ -1,0 +1,30 @@
+[package]
+name = "ursa-bbs-py"
+version = "0.1.0"
+authors = ["Andrew Whitehead"]
+edition = "2018"
+description = ""
+license = "MIT/Apache-2.0"
+
+[package.metadata.maturin]
+classifier = [
+  "Programming Language :: Python",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+
+[lib]
+name = "ursa_bbs"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[features]
+default = ["extension-module"]
+extension-module = ["pyo3/extension-module"]
+
+[dependencies]
+bbs = "0.4"
+hex = "0.4"
+# use 0.10.0 when released:
+pyo3 = { git = "https://github.com/PyO3/pyo3", rev = "c2b173a14f217506382a9975f1a3bc1e1c451893" }
+zeroize = { version = "1.1", features = ["zeroize_derive"] }
