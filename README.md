@@ -9,6 +9,7 @@ e : G_1 \times G_2 \rightarrow G_T
 $$
 
 Let $$\( g_1 \)$$ be a generator for $$\( G_1 \)$$, and $$\( g_2 \)$$ be a generator for $$\( G_2 \)$$. If we have points:
+
 $$
 \( U_1, U_2 \in G_1 \)  
 \( V_1, V_2 \in G_2 \)  
