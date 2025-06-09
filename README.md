@@ -2,7 +2,7 @@
 
 ## Pairing-Based Cryptography and Group Signatures
 
-With **pairing-based cryptography**, we have two cyclic groups: \( G_1 \) and \( G_2 \), which are both of prime order \( n \). A pairing on \((G_1, G_2, G_T)\) defines a function:
+With pairing-based cryptography, we have two cyclic groups: \( G_1 \) and \( G_2 \), which are both of prime order \( n \). A pairing on \((G_1, G_2, G_T)\) defines a function:
 
 \[
 e : G_1 \times G_2 \rightarrow G_T
@@ -10,8 +10,8 @@ e : G_1 \times G_2 \rightarrow G_T
 
 Let \( g_1 \) be a generator for \( G_1 \), and \( g_2 \) be a generator for \( G_2 \). If we have points:
 
-- \( U_1 \), \( U_2 \in G_1 \)
-- \( V_1 \), \( V_2 \in G_2 \)
+\( U_1, U_2 \in G_1 \)  
+\( V_1, V_2 \in G_2 \)  
 
 Then we get the bilinear mappings:
 
