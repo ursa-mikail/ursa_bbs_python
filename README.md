@@ -4,9 +4,9 @@
 
 With pairing-based cryptography, we have two cyclic groups: \( G_1 \) and \( G_2 \), which are both of prime order \( n \). A pairing on \((G_1, G_2, G_T)\) defines a function:
 
-\[
+$$
 e : G_1 \times G_2 \rightarrow G_T
-\]
+$$
 
 Let \( g_1 \) be a generator for \( G_1 \), and \( g_2 \) be a generator for \( G_2 \). If we have points:
 
@@ -15,13 +15,14 @@ Let \( g_1 \) be a generator for \( G_1 \), and \( g_2 \) be a generator for \( 
 
 Then we get the bilinear mappings:
 
-\[
+$$
 e(U_1 + U_2, V_1) = e(U_1, V_1) \cdot e(U_2, V_1)
-\]
+$$
 
-\[
+$$
 e(U_1, V_1 + V_2) = e(U_1, V_1) \cdot e(U_1, V_2)
-\]
+$$
+
 
 ---
 
