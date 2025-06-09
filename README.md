@@ -24,12 +24,12 @@ Effectively:
 . $HOME/.cargo/env && \
 cargo --version && \
 git clone https://github.com/ursa-mikail/ursa_bbs_python.git && \
-cd ursa-bbs-py && \
+cd ursa_bbs_python && \
 cargo build
 """
-"""
-!cp ursa-bbs-py/target/debug/libursa_bbs.so ursa_bbs_python/ursa_bbs.so
-!python3 ursa_bbs_python/test.py
 
+"""
+!cp ursa_bbs_python/target/debug/libursa_bbs.so ursa_bbs_python/ursa_bbs.so
+!python3 ursa_bbs_python/test.py
 """
 ```
