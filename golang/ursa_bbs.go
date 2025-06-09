@@ -73,11 +73,12 @@ func main() {
 		fmt.Println("Verify: false")
 	}
 
-	// Tamper check
+	// Tamper check:  flip the least significant bit of the hash of the message, and check the signature (and which should fail).
 	hashedMsgs[0][1] ^= 0x01
 	if !group.Verify(hashedMsgs[0], sha256.New(), sig) {
 		fmt.Println("Tampered signature failed as expected")
 	}
+	// Flip it back and check again (and which should be successful).
 	hashedMsgs[0][1] ^= 0x01
 
 	// Open signature
