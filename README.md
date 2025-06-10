@@ -25,8 +25,8 @@ $$
 e(U_1, V_1 + V_2) = e(U_1, V_1) \cdot e(U_1, V_2)
 $$
 
-If $$\ U $$\ is a point on $$\ 𝔾𝟙 $$\, and $$\ V $$\ is a point on $$\ 𝔾𝟚 $$\, we get:
-$$\ ê (aU,bV) = ê (U,V)^{ab} $$\ 
+If $$\ U \$$ is a point on $$\ 𝔾𝟙 \$$, and $$\ V \$$ is a point on $$\ 𝔾𝟚 \$$, we get:
+$$\ ê (aU,bV) = ê (U,V)^{ab} \$$ 
 
 ---
 
