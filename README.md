@@ -25,10 +25,10 @@ $$
 e(U_1, V_1 + V_2) = e(U_1, V_1) \cdot e(U_1, V_2)
 $$
 
-If $$\ U \$$ is a point on $$\ 𝔾𝟙 \$$, and $$\ V \$$ is a point on $$\ 𝔾𝟚 \$$, we get:
+If $$\ U \$$ is a point on $$\ 𝔾_𝟙 \$$, and $$\ V \$$ is a point on $$\ 𝔾_𝟚 \$$, we get:
 $$\ ê (aU,bV) = ê (U,V)^{ab} \$$ 
 
-Within BBS, using elliptic curve pairs, we have $$\ 𝔾𝟙 \$$ and $$\ 𝔾𝟚 \$$ which are BN256 curves, and these map to $$\ 𝔾𝕋 \$$, and which is also on a BN256 curve. This is the pairing function.
+Within BBS, using elliptic curve pairs, we have $$\ 𝔾_𝟙 \$$ and $$\ 𝔾_𝟚 \$$ which are BN256 curves, and these map to $$\ 𝔾_𝕋 \$$, and which is also on a BN256 curve. This is the pairing function.
 
 ---
 
