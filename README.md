@@ -15,7 +15,7 @@ Let $$\( g_1 \)$$ be a generator for $$\( G_1 \)$$, and $$\( g_2 \)$$ be a gener
 $$\( U_1, U_2 \in G_1 \)$$  
 $$\( V_1, V_2 \in G_2 \)$$
 
-If we have the points of $$\ U1 \$$ and $$\ U2 \$$ on $$\ 𝔾𝟙 \$$ and $$\ V1 )$$ and $$\ V2 \$$ on $$\ 𝔾𝟚 \$$, Then we get the bilinear mappings:
+If we have the points of $$\ U1 \$$ and $$\ U2 \$$ on $$\ 𝔾𝟙 \$$ and $$\ V1 $$ and $$\ V2 \$$ on $$\ 𝔾𝟚 \$$, Then we get the bilinear mappings:
 
 $$
 e(U_1 + U_2, V_1) = e(U_1, V_1) \cdot e(U_2, V_1)
