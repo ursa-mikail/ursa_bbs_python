@@ -85,29 +85,22 @@ and where `G2` is the base point on curve.
 Next we take the message of `M1`, `M2`, ... `Mn` to produce `m1`, `m2` ... `mn`. We can then hash each of these to give the elliptic points of `m1.H1`, `m2.H2` ... `mn.Hn`, and where `H1` ... `Hn` are on the $$\ 𝔾_𝟙 \$$ curve, and are known points by everyone involved in the signature.
 
 We then compute with point of:
-c = $$\ G_1 + ∑i mi.Hi \$$
-
-text
+c = $$\ G_1 + \sum i mi.Hi \$$
 
 This will be a point on 𝔾𝟙 curve. Next, we generate a random value of `e`, and then compute:
 A = $$\ \frac{1}{(x + e)}.c \$$
 
-text
 
 The signature is then:
 σ = (A, e)
-
-text
 
 ## Verify the signature
 
 To verify, we test the pairing of:
 $$\ ê (A, e.G_2 + pk) = ê (c, G_2) \$$
 
-text
-
 This works because:
-$$\ ê (1/(x + e).c, e.G_2 + x.G_2) = ê (c, G_2)^(1/(x + e)(x + e)) = ê (c, G_2) \$$
+$$\ ê (\frac{1}{(x + e)}.c, e.G_2 + x.G_2) = ê (c, G_2)^(\frac{1}{(x + e)}(x + e)) = ê (c, G_2) \$$
 
 The verifier will have to rebuild the value of `c` to verify the signature.
 
