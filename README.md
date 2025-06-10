@@ -82,17 +82,16 @@ and where `G2` is the base point on curve.
 
 ## Generate the signature
 
-Next we take the message of `M1`, `M2`, ... `Mn` to produce `m1`, `m2` ... `mn`. We can then hash each of these to give the elliptic points of `m1.H1`, `m2.H2` ... $$\ m_n.H_n \$$, and where `H1` ... `Hn` are on the $$\ 𝔾_𝟙 \$$ curve, and are known points by everyone involved in the signature.
+Next we take the message of `M1`, `M2`, ... `Mn` to produce `m1`, `m2` ... `mn`. We can hash each of these to give the elliptic points of `m1.H1`, `m2.H2` ... $$\ m_n.H_n \$$, and where `H1` ... `Hn` are on the $$\ 𝔾_𝟙 \$$ curve, and are known points by everyone involved in the signature.
 
-We then compute with point of:
+We compute with point of:
 c = $$\ G_1 + \sum_i m_i.H_i \$$
 
-This will be a point on 𝔾𝟙 curve. Next, we generate a random value of `e`, and then compute:
+This will be a point on 𝔾𝟙 curve. Next, we generate a random value of `e`, and compute:
 A = $$\ \frac{1}{(x + e)}.c \$$
 
 
-The signature is then:
-σ = (A, e)
+The signature is: $$\ σ = (A, e) \$$
 
 ## Verify the signature
 
