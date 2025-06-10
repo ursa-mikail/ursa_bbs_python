@@ -70,6 +70,50 @@ In a group signature scheme:
 - A new group key may be issued to update the group membership.
 
 ---
+# Generating the signature
+
+We initially create a private key (`sk`) of `x`:
+sk = x
+
+The public key is then:
+$$ pk = x.G_2 $$
+
+and where `G2` is the base point on curve.
+
+## Generate the signature
+
+Next we take the message of `M1`, `M2`, ... `Mn` to produce `m1`, `m2` ... `mn`. We can then hash each of these to give the elliptic points of `m1.H1`, `m2.H2` ... `mn.Hn`, and where `H1` ... `Hn` are on the $$ 𝔾_𝟙 $$ curve, and are known points by everyone involved in the signature.
+
+We then compute with point of:
+c = G1 + ∑i mi.Hi
+
+text
+
+This will be a point on 𝔾𝟙 curve. Next, we generate a random value of `e`, and then compute:
+A = 1/(x + e).c
+
+text
+
+The signature is then:
+σ = (A, e)
+
+text
+
+## Verify the signature
+
+To verify, we test the pairing of:
+ê (A, e.G2 + pk) = ê (c, G2)
+
+text
+
+This works because:
+ê (1/(x + e).c, e.G2 + x.G2) = ê (c, G2)^(1/(x + e)(x + e)) = ê (c, G2)
+
+text
+
+Overall, the verifier will have to rebuild the value of `c` to verify the signature.
+
+---
 
 ## Coding
 
