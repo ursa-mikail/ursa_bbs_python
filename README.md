@@ -78,18 +78,15 @@ sk = x
 The public key is then:
 $$\ pk = x.G_2 \$$
 
-and where `G2` is the base point on curve.
+and where $$\ G_2 \$$ is the base point on curve.
 
-## Generate the signature
-
-Next we take the message of `M1`, `M2`, ... `Mn` to produce `m1`, `m2` ... `mn`. We can hash each of these to give the elliptic points of `m1.H1`, `m2.H2` ... $$\ m_n.H_n \$$, and where `H1` ... `Hn` are on the $$\ 𝔾_𝟙 \$$ curve, and are known points by everyone involved in the signature.
+Next, take the message of $$\ M_1 \$$, $$\ M_2 \$$, ... $$\ M_n \$$ to produce $$\ m_1 \$$, $$\ m_2 \$$ ... $$\ m_n \$$. We can hash each of these to give the elliptic points of $$\ m_1.H_1 \$$, $$\ m_2.H_2 \$$ ... $$\ m_n.H_n \$$, and where $$\ H_1 \$$ ... $$\ H_n \$$ are on the $$\ 𝔾_𝟙 \$$ curve, and are known points by everyone involved in the signature.
 
 We compute with point of:
 c = $$\ G_1 + \sum_i m_i.H_i \$$
 
-This will be a point on 𝔾𝟙 curve. Next, we generate a random value of `e`, and compute:
+This will be a point on $$\ 𝔾_𝟙 \$$ curve. Next, we generate a random value of `e`, and compute:
 A = $$\ \frac{1}{(x + e)}.c \$$
-
 
 The signature is: $$\ σ = (A, e) \$$
 
