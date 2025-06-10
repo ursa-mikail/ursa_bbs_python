@@ -100,7 +100,7 @@ To verify, we test the pairing of:
 $$\ ê (A, e.G_2 + pk) = ê (c, G_2) \$$
 
 This works because:
-$$\ ê (\frac{1}{(x + e)}.c, e.G_2 + x.G_2) = ê (c, G_2)^(\frac{1}{(x + e)}(x + e)) = ê (c, G_2) \$$
+$$\ ê (\frac{1}{(x + e)}.c, e.G_2 + x.G_2) = ê (c, G_2)^{\frac{1}{(x + e)}(x + e))} = ê (c, G_2) \$$
 
 The verifier will have to rebuild the value of `c` to verify the signature.
 
