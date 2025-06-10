@@ -2,7 +2,9 @@
 
 ## Pairing-Based Cryptography and Group Signatures
 
-With pairing-based cryptography, we have two cyclic groups: $$\( G_1 \)$$ and $$\( G_2 \)$$, which are both of prime order $$\( n \)$$. A pairing on $$\((G_1, G_2, G_T)\)$$ defines a function:
+The method uses a group signature approach with bi-linear maps. This produces a signature that is around the same size of the RSA signature (around 200 bytes). 
+
+With elliptic curve pairing-based cryptography, we have two cyclic groups: $$\( 𝔾_1 \)$$ and $$\( 𝔾_2 \)$$, which are both of prime order $$\( n \)$$. A pairing on $$\((G_1, G_2, G_T)\)$$ defines a function:
 
 $$
 e : G_1 \times G_2 \rightarrow G_T
@@ -13,7 +15,7 @@ Let $$\( g_1 \)$$ be a generator for $$\( G_1 \)$$, and $$\( g_2 \)$$ be a gener
 $$\( U_1, U_2 \in G_1 \)$$  
 $$\( V_1, V_2 \in G_2 \)$$
 
-Then we get the bilinear mappings:
+If we have the points of $$\( U1 \)$$ and $$\( U2 \)$$ on $$\( 𝔾𝟙 \)$$ and $$\( V1 \)$$ and $$\( V2 \)$$ on $$\( 𝔾𝟚 \)$$, Then we get the bilinear mappings:
 
 $$
 e(U_1 + U_2, V_1) = e(U_1, V_1) \cdot e(U_2, V_1)
@@ -31,6 +33,12 @@ $$
 Can we produce a **digital signature** for a group of members such that it is **not possible to know who signed** within the group?
 
 This problem was solved in **2004** with **BBS signatures**, defined by Boneh, Boyen, and Shacham in [1].
+
+The methods were then advanced by Camenisch and Lysyanakaya, and where modern implementations are based on methods such as [2].
+
+For example, the government could digitally sign a whole lot of attributes about Alice, such as her gender, her name, her address, her telephone number and her ID number. Then, Alice can create zero-knowledge proofs about the signature when selecting revealing parts of his signed identity. In this way, Alice has control over which part of her identity she reveals. For example, if she just has to reveal his telephone number for a credit card application, she can selectively reveal just that part, but where the rest is masked off. The verifier will still be able to check that the credential has been signed by the government.
+
+
 
 In a group signature scheme:
 
@@ -66,8 +74,11 @@ In this example:
 - A message is hashed using **SHA-256**.
 - The resulting digest is signed using the **group private key**.
 
-References
+### References
+
 [1] Dan Boneh, Xavier Boyen, and Hovav Shacham. (2004, August). Short group signatures. In Annual International Cryptology Conference (pp. 41-55). Springer, Berlin, Heidelberg.
+
+[2] Tessaro, S., & Zhu, C. (2023, April). Revisiting BBS signatures. In Annual International Conference on the Theory and Applications of Cryptographic Techniques (pp. 691-721). Cham: Springer Nature Switzerland.
 
 ## Build Instructions
 
